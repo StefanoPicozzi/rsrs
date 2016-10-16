@@ -186,11 +186,11 @@
                                 "value": "${KIE_CONTAINER_DEPLOYMENT}"
                             }
                         ],
-                        "forcePull": true,
+                        "forcePull": false,
                         "from": {
                             "kind": "ImageStreamTag",
-                            "namespace": "${IMAGE_STREAM_NAMESPACE}",
-                            "name": "jboss-decisionserver62-openshift:1.2"
+                            "namespace": "openshift",
+                            "name": "decisionserver62:latest"
                         }
                     }
                 },
