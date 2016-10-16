@@ -37,7 +37,7 @@
         {
             "description": "The name for the application.",
             "name": "APPLICATION_NAME",
-            "value": "rsrs",
+            "value": "weightwatcher",
             "required": true
         },
         {
