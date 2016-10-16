@@ -18,7 +18,7 @@
         {
             "description": "The KIE Container deployment configuration in format: containerId=groupId:artifactId:version|c2=g2:a2:v2",
             "name": "KIE_CONTAINER_DEPLOYMENT",
-            "value": "containerweightwatchers10=com.redhat.demos:weightwatchers:1.0",
+            "value": "watch=com.redhat.demos:weightwatchers:1.0",
             "required": false
         },
         {
@@ -30,7 +30,8 @@
         {
             "description": "The password to access the KIE Server REST or JMS interface. Must be different than username; must not be root, admin, or administrator; must contain at least 8 characters, 1 alphabetic character(s), 1 digit(s), and 1 non-alphanumeric symbol(s).",
             "name": "KIE_SERVER_PASSWORD",
-            "value": "p@ssw0rd",
+            "from": "[a-zA-Z]{6}[0-9]{1}!",
+            "generate": "expression",
             "required": false
         },
         {
