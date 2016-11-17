@@ -18,6 +18,20 @@ url <- "http://172.30.222.234:8080"
 url <- paste(url, "/kie-server/services/rest/server/containers/watch", sep = "")
 print(url)
 
+header=c(Connection="close", 'Content-Type'="application/xml; charset=utf-8", 'Content-length'=nchar(request))
+response <- tryCatch({
+  GET(url, body=request, content_type_xml(), header=header, add_headers('X-KIE-ContentType'="XSTREAM"), verbose(), authenticate("kieserver", "kieserver1!", type="basic"))
+}, warning = function(w) {
+  print("Warning GET")
+  stop()
+}, error = function(e) {
+  print(geterrmessage())
+  print("Error GET")
+  stop()
+}, finally = {
+})
+print(content(response, "text"))
+
 # setwd("/home/guest/weightwatcher")
 
 # Participants
