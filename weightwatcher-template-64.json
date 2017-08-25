@@ -100,7 +100,7 @@
         {
             "description": "Namespace in which the ImageStreams for Red Hat Middleware images are installed. These ImageStreams are normally installed in the openshift namespace. You should only need to modify this if you've installed the ImageStreams in a different namespace/project.",
             "name": "IMAGE_STREAM_NAMESPACE",
-            "value": "openshift",
+            "value": "weightwatcher",
             "required": true
         }
     ],
@@ -189,7 +189,7 @@
                         "forcePull": false,
                         "from": {
                             "kind": "ImageStreamTag",
-                            "namespace": "openshift",
+                            "namespace": "weightwatcher",
                             "name": "decisionserver64:latest"
                         }
                     }
